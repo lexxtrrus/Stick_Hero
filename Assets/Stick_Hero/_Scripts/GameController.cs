@@ -73,7 +73,7 @@ public class GameController : MonoBehaviour
         float _nextPosX = _nextPlatform.transform.position.x - _nextPlatform.transform.localScale.x * 0.5f; // левый край следующей платформы
 
         float _minDist = _nextPosX - _curPosX - _player.transform.localScale.x * 0.5f; // мин расстрояние для успеха
-        float _maxDist = _nextPosX + _nextPlatform.transform.localScale.x * 0.5f + _player.transform.localScale.x * 0.5f; // макс расстрояние для успеха
+        float _maxDist = _nextPosX + _nextPlatform.transform.localScale.x * 0.5f + 0.05f; // макс расстрояние для успеха
 
         if (_stick.transform.localScale.y < _minDist || _stick.transform.localScale.y > _maxDist)
         {
