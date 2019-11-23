@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/SticKHeroGameplay.unity
+    path: Assets/Stick_Hero/_Scenes/SticKHeroGameplay.unity
     guid: f43d872bcf098f345b1624035004dd52
   m_configObjects: {}
