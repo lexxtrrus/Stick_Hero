@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
             _gameController.NextPlatform.transform.Translate(new Vector3(-9f, 0f, 0f) * Time.deltaTime);            
         }
 
-        if (_gameController.CurrentPlatform.transform.position.x >= -targerPosition) return;
+        if (_gameController.CurrentPlatform.transform.position.x >= -targerPosition) return;        
 
         IsMoving = false;
         

@@ -58,8 +58,8 @@ public class GameController : MonoBehaviour
         _currentPlatform.transform.position = new Vector3(0, -2.25f, 0f);
         _nextPlatform = Instantiate<GameObject>(_platformPrefab);
         _nextPlatform.transform.position = new Vector3(3f, -2.25f, 0f);
-        _textRestart.enabled = false;
         _textScore.text = _score.ToString();
+        _textRestart.enabled = false;
     }
     void Update()
     {
@@ -93,6 +93,8 @@ public class GameController : MonoBehaviour
     {
         Destroy(_currentPlatform);
         _currentPlatform = _nextPlatform;
+        _currentPlatform.transform.position = new Vector3(0f, -2.25f, 0f);
+
         _nextPlatform =  Instantiate<GameObject>(_platformPrefab); ;
 
         float _xRandomPos = Random.Range(1.5f, 4.5f);
