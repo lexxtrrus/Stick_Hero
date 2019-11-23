@@ -11,7 +11,7 @@ public class Wait : State
 
     public override void ChangeState()
     {
-        if (!Stick.Instance.IsScaling && !Stick.Instance.IsRotating)
+        if (!Player.Instance.IsMoving && !Stick.Instance.IsRotating)
         {
             _gameController.CurrentState = new Scaling(_gameController);
             Stick.Instance.IsScaling = true;

@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    private Player() { }
+    private static Player _instance;
+    public static Player Instance => _instance;
+
     [SerializeField] GameController _gameController;
     [SerializeField] Stick _stick;
     
@@ -14,6 +18,7 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
+        _instance = this;
         targerPosition = 0f;
         IsMoving = false;
         IsFalling = false;
